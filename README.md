@@ -27,22 +27,12 @@
 
 ---
 
-<<<<<<< HEAD
-## Setup Instructions
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/MDelarosa1993/rancid-tomatillos.git
-cd rancid-tomatillos
-```
-=======
 
 ## Screenshots:
 
 ![Movie Details Screenshot](src/Assets/MovieDetails.png)
 ![Movies Container Screenshot](src/Assets/MoviesContainer.png)
 
->>>>>>> 19ef97d260e56f1fcd4cabf21ad3660801a2241a
 
 ### 2. Install Dependencies
 ```bash
