@@ -1,61 +1,124 @@
-# Rancid Tomatillos - Starter Repo
+# Rancid Tomatillos 🎥🍅
 
-## [The project spec for Rancid Tomatillos can be found here.](https://curriculum.turing.edu/module3/projects/rancid-tomatillos)
+[Live Demo on Vercel](https://rancid-tomatillos.vercel.app/)
 
-## Set Up
+**Rancid Tomatillos** is a movie browsing application built with React. It allows users to explore a collection of movies, search by title, view detailed movie information, and interact by upvoting or downvoting movies.
 
-1.  Fork this repo
-2.  Clone **and rename** this repo: `git clone [remote-address] [new-name]`  
-    For example: `git clone git@github.com:turingschool-examples/rancid-tomatillos-starter.git rancid-tomatillos`
-3.  `cd` into the directory
-4.  Install necessary dependencies with `npm install`
-5.  Run your React app with `npm start`
-6.  Go to `http://localhost:3000/` and you should see a page with some starter elements
-7.  Enter `control + c` in your terminal to stop running the React app at any time
-8.  To run Cypress tests, use `npx cypress open`
+---
 
+## Features
 
-## Collaborators:
+- 🎬 **Movie Browsing**: Browse a collection of movies with poster images and vote counts.
+- 🔍 **Search Functionality**: Search for movies by title using a dynamic search bar.
+- 📄 **Movie Details**: View detailed information about a movie, including its title, genres, overview, and backdrop image.
+- 👍 **Vote on Movies**: Upvote or downvote movies to indicate your preferences.
+- 🔗 **Responsive Navigation**: Navigate between the movie list and individual movie details seamlessly.
 
-https://github.com/MDelarosa1993
-https://github.com/litobot
+---
 
+## Technologies Used
 
-## Deployed Link:
+- **React**: For building the user interface.
+- **React Router**: For dynamic routing and navigation.
+- **CSS**: For styling the application.
+- **Fetch API**: For interacting with the backend API.
+- **Heroku**: Hosted backend API for fetching movie data.
+- **Vercel**: Deployment platform for the React frontend.
 
-https://rancid-tomatillos-roan-eta.vercel.app
+---
 
-## Screenshots:
+## Setup Instructions
 
-![App Screenshot](./assets/MovieDetails.png)
-![App Screenshot](./assets/MoviesContainer.png)
+### 1. Clone the Repository
+```bash
+git clone https://github.com/your-username/rancid-tomatillos.git
+cd rancid-tomatillos
+```
 
-## Overview of Project & Goals:
+### 2. Install Dependencies
+```bash
+npm install
+```
 
-1. This application provides users with a simple way to view popular movies at a glance with their current collective rating by all users visiting the app.
+### 3. Run the App Locally
+```bash
+npm start
+```
 
-2. Users can upvote or downvote movies as they see fit and the modified vote counts persist upon a page refresh.
+The application will run on `http://localhost:3000`.
 
-3. Users can click a desired movie to view more details about it including an additional image, listed genres, and a brief overview of the movie's plot.
+---
 
-4. This application was built using React, React Router, and was end-to-end tested via Cypress utilizing API call interception and stubbed data to prevent unnecessary calls. We chose to deploy using Vercel as it was smooth and seamless.
+## API Integration
 
-5. Challenges: 
+### Base URL
+The application consumes the following API:  
+`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies`
 
-- We had some mismatches in scheduling due to being in different time zones and personal/family responsibilities. However, we synced for work over 90% of the time and made decent progress.
+### Endpoints
+1. **Fetch All Movies**:  
+   `GET /movies`  
+   Retrieves a list of all movies.
+   
+2. **Fetch Movie Details**:  
+   `GET /movies/:movieId`  
+   Retrieves detailed information about a specific movie.
 
-- Steep learning curve with React, React Router, and Cypress. That was a lot all at once.
+3. **Vote on a Movie**:  
+   `PATCH /movies/:movieId`  
+   Updates the vote count for a specific movie.  
+   - Request body example: `{ "vote_direction": "up" }`
 
-6. Wins:
+---
 
-- Implementing Cypress and React Router effectively.
+## App Structure
 
-- Getting to work together and get to know each other better! <3
+### Components
+1. **App**: The root component handling state and routing.
+2. **MoviesContainer**: Displays a list of movie posters.
+3. **MoviePoster**: Represents an individual movie poster with voting functionality.
+4. **MovieDetails**: Shows detailed information about a specific movie.
 
-- Got some fun styling practice. It's nice to build something worth looking at.
+---
 
-- Getting more experience deploying.
+## Usage
 
-7. Reflections:
+1. **Browse Movies**: 
+   - Visit the homepage to view a collection of movies with their posters and vote counts.
 
-- It seems like the rumors surrounding learning React regarding the steep learning curve are accurate.  There's a lot of stuff to get used to upfront, but it's clear once those are conquered, it's relatively straightforward.
+2. **Search for a Movie**:
+   - Use the search bar at the top to filter movies by title.
+
+3. **View Movie Details**:
+   - Click on a movie poster to view its details, including the title, genres, and description.
+
+4. **Vote on Movies**:
+   - Upvote or downvote a movie directly from its poster.
+
+---
+
+## Future Improvements
+
+- 🌟 **User Authentication**: Allow users to log in and save their favorite movies.
+- 🌟 **Pagination**: Add pagination or infinite scrolling for larger movie collections.
+- 🌟 **Enhanced Styling**: Improve the UI with animations and a mobile-friendly design.
+
+---
+
+## Deployment
+
+The backend API is hosted on Heroku, and the React frontend is deployed on Vercel.  
+Visit the live app here: [Rancid Tomatillos on Vercel](https://rancid-tomatillos.vercel.app/)
+
+---
+
+## Collaborators
+
+- **Melchor De La Rosa** - [GitHub Profile](https://github.com/MDelarosa1993)
+- **Lito Croy** - [Github Profile](https://github.com/litobot)
+
+---
+
+## License
+
+This project is licensed under the MIT License.
