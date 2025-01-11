@@ -31,7 +31,7 @@
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/rancid-tomatillos.git
+git clone https://github.com/MDelarosa1993/rancid-tomatillos.git
 cd rancid-tomatillos
 ```
 
