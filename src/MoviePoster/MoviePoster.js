@@ -8,7 +8,7 @@ const MoviePoster = ({ posterPath , voteCount, posterId }) => {
   const [votes, setVotes] = useState(voteCount)
   
   function adjustVote(vertical){
-    fetch(`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies/${posterId}`, {
+    fetch(`http://localhost:3000/movies/${posterId}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

@@ -1,7 +1,5 @@
 # Rancid Tomatillos 🎥🍅
 
-[Live Demo on Vercel](https://rancid-tomatillos.vercel.app/)
-
 **Rancid Tomatillos** is a movie browsing application built with React. It allows users to explore a collection of movies, search by title, view detailed movie information, and interact by upvoting or downvoting movies.
 
 ---
@@ -44,7 +42,7 @@ npm install
 npm start
 ```
 
-The application will run on `http://localhost:3000`.
+The application will run on `http://localhost:3001`.
 
 ---
 
@@ -52,7 +50,8 @@ The application will run on `http://localhost:3000`.
 
 ### Base URL
 The application consumes the following API:  
-`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies`
+`https://github.com/MDelarosa1993/rancid-tomatillos-api`
+Make sure to run the backend api 
 
 ### Endpoints
 1. **Fetch All Movies**:  
@@ -101,13 +100,6 @@ The application consumes the following API:
 - 🌟 **User Authentication**: Allow users to log in and save their favorite movies.
 - 🌟 **Pagination**: Add pagination or infinite scrolling for larger movie collections.
 - 🌟 **Enhanced Styling**: Improve the UI with animations and a mobile-friendly design.
-
----
-
-## Deployment
-
-The backend API is hosted on Heroku, and the React frontend is deployed on Vercel.  
-Visit the live app here: [Rancid Tomatillos on Vercel](https://rancid-tomatillos.vercel.app/)
 
 ---
 

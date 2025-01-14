@@ -12,9 +12,10 @@ function App() {
   const [searchQuery, setSearchQuery] = useState('');
 
   const fetchMoviePosters = () => {
-    fetch("https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies")
+    fetch("http://localhost:3000/movies")
       .then(response => response.json())
       .then(posterData => {
+        console.log(posterData)
         setPosters([...posterData]);
         setSearchResults(posterData);
       })

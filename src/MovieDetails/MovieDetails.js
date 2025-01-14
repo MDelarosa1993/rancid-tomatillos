@@ -7,10 +7,14 @@ function MovieDetails() {
   const [details, setDetails] = useState(null);
 
   useEffect(() => {
-    fetch(`https://rancid-tomatillos-api-cc6f59111a05.herokuapp.com/api/v1/movies/${movieId}`)
+    fetch(`http://localhost:3000/movies/${movieId}`)
       .then(response => response.json())
       .then(movieDetails => {
-        setDetails(movieDetails);
+        console.log(movieDetails)
+        setDetails({
+          ...movieDetails,
+          genre_ids: JSON.parse(movieDetails.genre_ids), // Parse genre_ids
+        });
       })
       .catch(error => {
         console.log('Error fetching movie details:', error);
